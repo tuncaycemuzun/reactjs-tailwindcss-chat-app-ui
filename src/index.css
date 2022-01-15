@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .login-bg,
+  .register-bg {
+    background: hsla(183, 76%, 48%, 1);
+
+    background: linear-gradient(
+      90deg,
+      hsla(183, 76%, 48%, 1) 0%,
+      hsla(168, 79%, 50%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      90deg,
+      hsla(183, 76%, 48%, 1) 0%,
+      hsla(168, 79%, 50%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      90deg,
+      hsla(183, 76%, 48%, 1) 0%,
+      hsla(168, 79%, 50%, 1) 100%
+    );
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1DD0D9", endColorstr="#1DE4BC", GradientType=1 );
+  }
+  .shadow-default{
+    box-shadow: -1px -1px 34px -12px rgba(0,0,0,0.78);
+  }
 }
