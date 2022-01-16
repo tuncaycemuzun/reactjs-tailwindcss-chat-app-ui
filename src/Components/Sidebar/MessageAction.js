@@ -1,9 +1,14 @@
-import React, { useState , useEffect} from "react";
+import React, { useState ,useRef} from "react";
 import { BsPlus } from "react-icons/bs";
-import PropTypes from 'prop-types';
+import useOnClickOutside from "../../Hooks/useOnClickOutside";
 function MessageAction() {
   const [isActiveCategory, setActiveCategory] = useState(1);
-  const [isActiveAdd, setisActiveAdd] = useState(true);
+  const [isActiveAdd, setisActiveAdd] = useState(false);
+  const ref = useRef();
+  useOnClickOutside(ref,()=>{
+    setisActiveAdd(false);
+  });
+
   const messageCategori = [
     {
       id: 1,
@@ -48,7 +53,7 @@ function MessageAction() {
           <span>Add</span>
           <BsPlus />
           {isActiveAdd ? (
-            <div className="absolute top-10 left-6 z-20 bg-white w-48 h-auto rounded-lg shadow-2xl">
+            <div ref={ref} className="absolute top-10 left-6 z-20 bg-white w-48 h-auto rounded-lg shadow-2xl">
               <ul className="px-2 py-2">
                 <li className="flex items-center justify-between h-10 hover:bg-[#E9EFF5] px-2 py-1 rounded-md transition-all">
                   New User

@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from '../../Assets/Images/logo.png'
-import {FormInput} from '../Shared/FormInput'; 
-import {FiLogIn} from 'react-icons/fi';
-import {SignInWith} from '../Shared/SignInWith';
+import Logo from "../../Assets/Images/logo.png";
+import { FormInput } from "../Shared/FormInput";
+import { FiLogIn } from "react-icons/fi";
+import { SignInWith } from "../Shared/SignInWith";
 import { Link } from "react-router-dom";
 
 const inputs = [
@@ -11,7 +11,8 @@ const inputs = [
 ];
 export const LoginForm = () => {
   return (
-      <div>
+    <div className="w-2/6 flex items-center justify-center">
+      <div className="w-4/6 h-[600px] bg-white px-6 py-6 shadow-md flex flex-col items-center">
         <div className="login-bg w-full h-48 flex flex-col items-center justify-center">
           <img src={Logo} alt="logo" className="w-12 h-12" />
           <div className="flex items-center pt-4 w-24 justify-between">
@@ -29,11 +30,15 @@ export const LoginForm = () => {
               />
             );
           })}
-          <Link to="/home" className="login-bg mt-5 h-10 rounded-md cursor-pointer hover:shadow-lg hover:transition-shadow text-white font-light text-lg flex items-center justify-center">
+          <Link
+            to="/home"
+            className="login-bg mt-5 h-10 rounded-md cursor-pointer hover:shadow-lg hover:transition-shadow text-white font-light text-lg flex items-center justify-center"
+          >
             Sign In
           </Link>
-          <SignInWith/>
+          <SignInWith />
         </div>
       </div>
+    </div>
   );
 };
