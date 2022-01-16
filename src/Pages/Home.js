@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import  Sidebar  from '../Components/Sidebar/Sidebar';
 
-const Home = () => {
+
+export const Home = () => {
+    useEffect(() => {
+        document.title = "Chat | Home";
+    }, [])
     return (
-        <div>
-            home
+        <div className='h-screen bg-white'>
+            <Sidebar/>
         </div>
     )
 }
 
-export default Home;

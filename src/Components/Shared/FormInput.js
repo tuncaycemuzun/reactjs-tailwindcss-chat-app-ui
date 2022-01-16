@@ -1,8 +1,9 @@
 import React from 'react'
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { FiUser } from "react-icons/fi";
 
-export const LoginFormInput = ({icon,placeHolder}) => {
+export const FormInput = ({icon,placeHolder}) => {
     return (
         <div className="w-full relative">
             <input
@@ -15,6 +16,9 @@ export const LoginFormInput = ({icon,placeHolder}) => {
             }
             {
                 icon == 'password' ? <RiLockPasswordLine className="cursor-pointer absolute right-2 top-3 text-xl text-gray-400" /> : ''
+            }
+            {
+                icon == 'username' ? <FiUser className="cursor-pointer absolute right-2 top-3 text-xl text-gray-400"/> : ''
             }
         </div>
     )
