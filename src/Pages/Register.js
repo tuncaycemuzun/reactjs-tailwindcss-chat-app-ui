@@ -7,10 +7,10 @@ export const Register = () => {
     document.title = title;
   }, []);
   return (
-    <div className="h-screen login-bg flex justify-around">
+    <div className="h-full md:h-screen w-full login-bg flex flex-col md:flex-row justify-center items-center">
       <RegisterForm />
-      <div className="w-4/6 flex flex-col items-start justify-center text-5xl text-white gap-y-10 font-light">
-        <p className="w-4/6 line leading-[1.1]">
+      <div className="hidden px-0 md:px-5 md:py-5 md:flex w-full flex-col items-start justify-center text-5xl text-white gap-y-10 font-light">
+        <p className="w-full lg:w-5/6 line leading-[1.1]">
           Talkshak is a simplest and friendly interface Messagner or <br />
           plateform.
         </p>
