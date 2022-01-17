@@ -14,7 +14,7 @@ export const RegisterForm = () => {
     <div className="h-full md:h-screen w-full md:w-4/6 flex items-center justify-center">
       <div className="w-full md:w-96 h-[650px]  bg-white px-0 py-0 md:px-6 md:py-6  shadow-md flex flex-col items-center">
         <div className="login-bg w-full h-48 flex flex-col items-center justify-center">
-          <img src={Logo} className="w-12 h-12" />
+          <img alt="logo" src={Logo} className="w-12 h-12" />
           <div className="flex items-center pt-4 w-24 justify-between">
             <FiLogIn className="text-white text-xl" />
             <span className="text-white font-light text-xl">Sign In</span>
