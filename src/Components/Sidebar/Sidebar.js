@@ -5,15 +5,13 @@ import SidebarHeader from "./SidebarHeader";
 
 function Sidebar() {
   return (
-    <div className="px-8 py-6 flex flex-col gap-y-4">
-      <div className="w-[340px] h-full">
-        <div className="w-full h-28 flex flex-col justify-between gap-y-2">
+      <div className="w-[400px] p-4 h-full">
+        <div className="w-full h-28 items-center flex flex-col justify-between gap-y-2">
           <SidebarHeader />
           <MessageAction />
           <MessagesList />
         </div>
       </div>
-    </div>
   );
 }
 

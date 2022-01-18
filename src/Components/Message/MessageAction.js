@@ -27,7 +27,7 @@ function MessageAction() {
     },
   ];
   return (
-    <div >
+    <div className="flex w-[340px] flex-col justify-between items-center">
       <div className="w-full flex gap-x-4 mt-2">
         {messageCategori.map((item, i) => {
           return (

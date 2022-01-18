@@ -5,7 +5,7 @@ function MessagesList() {
   const menuItems = useSelector((state) => state.message.messages);
   const activeMessage = useSelector(state => state.message.activeMessage);
   return (
-    <div className="flex w-full  mt-10">
+    <div className="flex w-[340px] mt-10">
       <div className="flex w-full h-[430px] overflow-y-scroll flex-col">
         {menuItems.length > 0 &&
           menuItems.map((item,i) => {

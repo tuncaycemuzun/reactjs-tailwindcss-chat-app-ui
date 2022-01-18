@@ -19,7 +19,7 @@ const Message = ({
       onClick={() => dispatch(setActiveMessage(index))}
       className={
         (index === activeMessage ? "bg-sky-100 pl-5" : "") +
-        " relative hover:shadow-xl transition-all cursor-pointer flex-shrink-0 flex items-center px-2 py-4 w-full h-24 gap-x-4 border-b border-b-gray-200"
+        " relative hover:shadow-xl transition-all cursor-pointer flex-shrink-0 flex items-center px-2 py-4 w-full h-20 gap-x-4 border-b border-b-gray-200"
       }
     >
       <div className="relative">
@@ -38,7 +38,7 @@ const Message = ({
       <div className="flex flex-col justify-between w-full">
         <div className="flex justify-between w-full">
           <div className="flex items-center">
-            <span className="font-medium">{name}</span>
+            <span className="font-medium text-sm">{name}</span>
             <span
               className={
                 unreadMessage !== 0
@@ -50,9 +50,9 @@ const Message = ({
               {unreadMessage !== 0 ? unreadMessage + "+" : ""}
             </span>
           </div>
-          <div className="font-medium text-gray-400">{messageDate}</div>
+          <div className="font-medium text-sm text-gray-400">{messageDate}</div>
         </div>
-        <div className="font-medium text-gray-400">{typing === true ? "Typing..." : "Test mesaj içeriği"}</div>
+        <div className="font-medium text-sm text-gray-400">{typing === true ? "Typing..." : "Test mesaj içeriği"}</div>
       </div>
       {index === activeMessage ? (
         <span className="absolute left-0 top-0 h-full w-1 bg-sky-300"></span>
