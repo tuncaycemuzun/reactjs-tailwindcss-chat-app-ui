@@ -11,8 +11,8 @@ const inputs = [
 ];
 export const LoginForm = () => {
   return (
-    <div className="w-full md:w-96 flex items-center justify-center">
-      <div className="w-full h-[600px] bg-white px-0 py-0 md:px-6 md:py-6 shadow-md flex flex-col items-center">
+    <div className="h-full md:h-screen w-full md:w-4/6 flex items-center justify-center">
+      <div className="w-full md:w-96 h-[650px]  bg-white px-0 py-0 md:px-6 md:py-6  shadow-md flex flex-col items-center">
         <div className="login-bg w-full h-48 flex flex-col items-center justify-center">
           <img src={Logo} alt="logo" className="w-12 h-12" />
           <div className="flex items-center pt-4 w-24 justify-between">
